@@ -1,0 +1,494 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/svgicons/logo-small.svg">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-ui-slider@1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.8.3/css/lightgallery-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.8.3/css/lg-zoom.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script defer src="js/app.min.js"></script>
+    <title>Отзывы</title>
+</head>
+
+    <body>
+        <div class="wrapper">
+            <header class="header">
+    <div class="container">
+        <a href="/" class="header__logo">
+            <img src="img/svgicons/logo.svg" alt="logo">
+        </a>
+        <nav class="header__nav">
+            <button class="header-search__btn mobile">
+                <img src="img/svgicons/search.svg" alt="search">
+                Поиск
+            </button>
+            <a href="#">Квест-экскурсии</a>
+            <a href="#">Экскурсии</a>
+            <a href="#">Семейные путешествия</a>
+            <a href="#">На Новый год</a>
+            <a href="#">Отзывы</a>
+        </nav>
+        <nav class="header__btns">
+            <a href="tel:+7 (925) 081-89-09">
+                <p>+7 (925) 081-89-09</p>
+                <img src="img/svgicons/header-phone.svg" alt="header-phone">
+            </a>
+            <button class="header-search__btn">
+                <img src="img/svgicons/search.svg" alt="search">
+            </button>
+            <a href="#">
+                <img src="img/svgicons/watsapp.svg" alt="watsapp">
+            </a>
+            <a href="#">
+                <img src="img/svgicons/tg.svg" alt="tg">
+            </a>
+            <button class="btn-green">Заказать звонок</button>
+            <form action="#" class="header-search__form search">
+                <div class="container">
+                    <div class="header-search__close"></div>
+                    <input type="search" placeholder="Введите ваш запрос">
+                    <button type="submit">
+                        <img src="img/svgicons/search.svg" alt="">
+                    </button>
+                </div>
+            </form>
+        </nav>
+        <button class="header__burger">
+            <span></span>
+        </button>
+    </div>
+</header>
+<!-- <svg>
+    <use xlink:href="#favorite"></use>
+</svg> -->
+
+            <main class="content">
+                <article class="breadcrumbs">
+                    <div class="container">
+                        <main class="breadcrumbs__row">
+                            <a href="#">Главная</a>
+                            <span>/</span>
+                            <a href="#">Отзывы</a>
+                        </main>
+                        <a href="#" class="breadcrumbs__back">
+                            <img src="img/svgicons/back-arrow.svg" alt="">
+                            Вернуться на главную
+                        </a>
+                    </div>
+                </article>
+                <article class="ceo">
+                    <div class="container">
+                        <header class="block-header">
+                            <h1>Отзывы</h1>
+                            <p>
+                                Главные зимние праздники – самое подходящее время для того, чтобы позволить себе и своим детям все развлечения, которые вы откладывали на потом на протяжении года. И как раз тематические новогодние экскурсии в музеях Москвы и Подмосковья помогут ребенку окунуться в праздничную атмосферу торжества и веселья - с нотками интриги и авантюры. Они станут для детей превосходной возможностью провести время по-настоящему захватывающе, комфортно и просто интересно - и получить в подарок настоящее путешествие в сказку
+                            </p>
+                        </header>
+                    </div>
+                </article>
+                <article class="reviews">
+                    <div class="container">
+                        <div class="filter right">
+                            <p>182 отзыва</p>
+                            <button class="filter__btn">
+                                <img src="img/svgicons/filter.svg" alt="filter">
+                            </button>
+                            <div class="filter__body">
+                                <label>
+                                    <p>Сперва новые</p>
+                                    <input type="checkbox">
+                                    <img src="img/svgicons/checked.svg" alt="checked">
+                                </label>
+                                <label>
+                                    <p>Сперва старые</p>
+                                    <input type="checkbox">
+                                    <img src="img/svgicons/checked.svg" alt="checked">
+                                </label>
+                                <label>
+                                    <p>Положительные оценки</p>
+                                    <input type="checkbox">
+                                    <img src="img/svgicons/checked.svg" alt="checked">
+                                </label>
+                            </div>
+                        </div>
+                        <main class="reviews__row">
+                            <div class="reviews-item">
+                                <h3>Иванов Иван</h3>
+                                <div class="reviews-item__stars">
+                                    <img src="img/svgicons/star-fill.svg" alt="">
+                                    <img src="img/svgicons/star-fill.svg" alt="">
+                                    <img src="img/svgicons/star-fill.svg" alt="">
+                                    <img src="img/svgicons/star-half.svg" alt="">
+                                    <img src="img/svgicons/star.svg" alt="">
+                                </div>
+                                <p>Gorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                                <time datetime="2025-04-10">10.04.2025</time>
+                            </div>
+                            <div class="reviews-item">
+                                <h3>Иванов Иван</h3>
+                                <div class="reviews-item__stars">
+                                    <img src="img/svgicons/star-fill.svg" alt="">
+                                    <img src="img/svgicons/star-fill.svg" alt="">
+                                    <img src="img/svgicons/star-fill.svg" alt="">
+                                    <img src="img/svgicons/star-half.svg" alt="">
+                                    <img src="img/svgicons/star.svg" alt="">
+                                </div>
+                                <p>Gorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                                <time datetime="2025-04-10">10.04.2025</time>
+                            </div>
+                            <div class="reviews-item">
+                                <h3>Иванов Иван</h3>
+                                <div class="reviews-item__stars">
+                                    <img src="img/svgicons/star-fill.svg" alt="">
+                                    <img src="img/svgicons/star-fill.svg" alt="">
+                                    <img src="img/svgicons/star-fill.svg" alt="">
+                                    <img src="img/svgicons/star-half.svg" alt="">
+                                    <img src="img/svgicons/star.svg" alt="">
+                                </div>
+                                <p>Gorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                                <time datetime="2025-04-10">10.04.2025</time>
+                            </div>
+                            <div class="reviews-item">
+                                <h3>Иванов Иван</h3>
+                                <div class="reviews-item__stars">
+                                    <img src="img/svgicons/star-fill.svg" alt="">
+                                    <img src="img/svgicons/star-fill.svg" alt="">
+                                    <img src="img/svgicons/star-fill.svg" alt="">
+                                    <img src="img/svgicons/star-half.svg" alt="">
+                                    <img src="img/svgicons/star.svg" alt="">
+                                </div>
+                                <p>Gorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                                <time datetime="2025-04-10">10.04.2025</time>
+                            </div>
+                            <div class="reviews-item">
+                                <h3>Иванов Иван</h3>
+                                <div class="reviews-item__stars">
+                                    <img src="img/svgicons/star-fill.svg" alt="">
+                                    <img src="img/svgicons/star-fill.svg" alt="">
+                                    <img src="img/svgicons/star-fill.svg" alt="">
+                                    <img src="img/svgicons/star-half.svg" alt="">
+                                    <img src="img/svgicons/star.svg" alt="">
+                                </div>
+                                <p>Gorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                                <time datetime="2025-04-10">10.04.2025</time>
+                            </div>
+                        </main>
+                    </div>
+                </article>
+                <article class="reviews">
+                    <div class="container">
+                        <header class="block-header">
+                            <h2>Отзывы в мессенджерах и соцсетях</h2>
+                        </header>
+                        <main class="reviews__row">
+                            <div class="reviews-item">
+                                <img src="img/catalog/1.png" alt="">
+                            </div>
+                            <div class="reviews-item">
+                                <img src="img/catalog/1.png" alt="">
+                            </div>
+                            <div class="reviews-item">
+                                <img src="img/catalog/1.png" alt="">
+                            </div>
+                            <div class="reviews-item">
+                                <img src="img/catalog/1.png" alt="">
+                            </div>
+                            <div class="reviews-item">
+                                <img src="img/catalog/1.png" alt="">
+                            </div>
+                        </main>
+                    </div>
+                </article>
+                <article class="reviews">
+                    <div class="container">
+                        <header class="block-header">
+                            <h2>Видеоотзывы</h2>
+                        </header>
+                        <main class="reviews__row">
+                            <div class="reviews-item">
+                                <video src="./files/1.mp4" controls></video>
+                                <h3>Иванов Иван</h3>
+                                <time datetime="2025-04-10">10.04.2025</time>
+                            </div>
+                            <div class="reviews-item">
+                                <video src="./files/1.mp4" controls></video>
+                                <h3>Иванов Иван</h3>
+                                <time datetime="2025-04-10">10.04.2025</time>
+                            </div>
+                            <div class="reviews-item">
+                                <video src="./files/1.mp4" controls></video>
+                                <h3>Иванов Иван</h3>
+                                <time datetime="2025-04-10">10.04.2025</time>
+                            </div>
+                            <div class="reviews-item">
+                                <video src="./files/1.mp4" controls></video>
+                                <h3>Иванов Иван</h3>
+                                <time datetime="2025-04-10">10.04.2025</time>
+                            </div>
+                            <div class="reviews-item">
+                                <video src="./files/1.mp4" controls></video>
+                                <h3>Иванов Иван</h3>
+                                <time datetime="2025-04-10">10.04.2025</time>
+                            </div>
+                        </main>
+                    </div>
+                </article>
+                <article class="excursion-main article">
+                    <div class="container">
+                        <form action="#" class="excursion-main__form">
+                            <h2>Оставьте отзыв, помогите нам стать лучше</h2>
+                            <div class="btn-green excursion-main__open">
+                                Оставить отзыв
+                            </div>
+                            <div class="excursion-main__hidden">
+                                <div class="excursion-main__inputs">
+                                    <input type="text" name="name" placeholder="Имя">
+                                    <input type="text" name="phone" placeholder="Номер телефона">
+                                    <div class="set-stars">
+                                        <p>Оценка</p>
+                                        <fieldset class="rating-input">
+                                            <input
+                                                type="radio"
+                                                value="5"
+                                                id="stars-star5"
+                                                name="rating"
+                                            >
+                                            <label for="stars-star5" title="5 Stars"></label>
+                                            <input
+                                                type="radio"
+                                                value="4"
+                                                id="stars-star4"
+                                                name="rating"
+                                            >
+                                            <label for="stars-star4" title="4 Stars"></label>
+                                            <input
+                                                type="radio"
+                                                value="3"
+                                                id="stars-star3"
+                                                name="rating"
+                                            >
+                                            <label for="stars-star3" title="3 Stars"></label>
+                                            <input
+                                                type="radio"
+                                                value="2"
+                                                id="stars-star2"
+                                                name="rating"
+                                            >
+                                            <label for="stars-star2" title="2 Stars"></label>
+                                            <input
+                                                type="radio"
+                                                value="1"
+                                                id="stars-star1"
+                                                name="rating"
+                                            >
+                                            <label for="stars-star1" title="1 Stars"></label>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                                <textarea name="comment" placeholder="Комментарий"></textarea>
+                                <div class="excursion-main__send">
+                                    <label class="checkbox">
+                                        <input type="checkbox" class="custom-checkbox" checked="">
+                                        <p>
+                                            Я соглашаюсь с
+                                            <a href="#">Политикой конфиденциальности</a>
+                                            и
+                                            <a href="#">Обработки персональных данных</a>
+                                            .
+                                        </p>
+                                    </label>
+                                    <button class="btn-green">Оставить отзыв</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </article>
+                <article class="subcribe-tg article">
+                    <div class="container">
+                        <main class="subcribe-tg__main">
+                            <h2>Подпишитесь на наш Телеграм</h2>
+                            <p>Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu.</p>
+                            <a href="#" class="btn-green">
+                                Подписаться
+                                <img src="img/svgicons/tg-black.svg" alt="">
+                            </a>
+                        </main>
+                        <img src="img/svgicons/index/subscribe-tg/content-right.svg" alt="">
+                    </div>
+                </article>
+            </main>
+            <footer class="footer">
+    <div class="container">
+        <div class="footer__item info">
+            <header class="footer__header">
+                <h2>Информация</h2>
+                <img src="img/svgicons/arrow-down.svg" alt="">
+            </header>
+            <nav class="footer__nav">
+                <a href="#">Главная</a>
+                <a href="#">Квест-экскурсии</a>
+                <a href="#">Экскурсии</a>
+                <a href="#">Афиши сборных групп</a>
+                <a href="#">Пушкинский музей</a>
+                <a href="#">На новый год</a>
+                <a href="#">Семейные путешествия</a>
+                <a href="#">Отзывы</a>
+                <a href="#">Оплата</a>
+                <a href="#">Блог</a>
+                <a href="#">Фото-видео</a>
+                <a href="#">Контакты</a>
+            </nav>
+        </div>
+        <div class="footer__item quests">
+            <header class="footer__header">
+                <h2>Квест-экскурсии</h2>
+                <img src="img/svgicons/arrow-down.svg" alt="">
+            </header>
+            <nav class="footer__nav">
+                <a href="#">Как жили на Руси в прошлом</a>
+                <a href="#">Тайна древней карты Кремля</a>
+                <a href="#">Секреты космических полетов</a>
+            </nav>
+        </div>
+        <div class="footer__item pushkin">
+            <header class="footer__header">
+                <h2>Пушкинский музей</h2>
+                <img src="img/svgicons/arrow-down.svg" alt="">
+            </header>
+            <nav class="footer__nav">
+                <a href="#">Импрессионисты открывают мир</a>
+                <a href="#">Тайны Микеланджело</a>
+                <a href="#">Прогулка по Древнему Египту</a>
+            </nav>
+        </div>
+        <div class="footer__item contacts">
+            <header class="footer__header">
+                <h2>Контакты</h2>
+                <img src="img/svgicons/arrow-down.svg" alt="">
+            </header>
+            <nav class="footer__nav">
+                <a href="tel:+7 (925) 081-89-09">+7 (925) 081-89-09</a>
+                <a href="mailto:kvestvmuzee@gmail.com">kvestvmuzee@gmail.com</a>
+                <p>127521, г. Москва, Ул Октябрьская, д 80, стр 3, офис 3307-2</p>
+                <p>пн.-вс. с 9.00 до 21.00</p>
+                <div class="socials">
+                    <a href="#">
+                        <img src="img/svgicons/watsapp.svg" alt="watsapp">
+                    </a>
+                    <a href="#">
+                        <img src="img/svgicons/tg.svg" alt="tg">
+                    </a>
+                </div>
+            </nav>
+            <button class="btn-green btn-callback">Заказать звонок</button>
+        </div>
+        <div class="footer__item excursions">
+            <header class="footer__header">
+                <h2>Экскурсии</h2>
+                <img src="img/svgicons/arrow-down.svg" alt="">
+            </header>
+            <nav class="footer__nav">
+                <a href="#">Как жили на Руси в прошлом</a>
+                <a href="#">Тайна древней карты Кремля</a>
+                <a href="#">Секреты космических полетов</a>
+            </nav>
+        </div>
+        <div class="footer__item new-year">
+            <header class="footer__header">
+                <h2>Квесты на Новый год</h2>
+                <img src="img/svgicons/arrow-down.svg" alt="">
+            </header>
+            <nav class="footer__nav">
+                <a href="#">Новогодние сказания Руси</a>
+                <a href="#">Волшебная подкова Деда мороза</a>
+            </nav>
+        </div>
+        <div class="footer__item logo">
+            <a href="#" class="footer__logo">
+                <img src="img/svgicons/logo-footer.svg" alt="">
+            </a>
+            <p>© 2025 kvestvmuzee.ru</p>
+        </div>
+        <div class="footer__item copy">
+            <a href="#">Политика конфиденциальности</a>
+            <a href="#">Оферта на предоставление услуг</a>
+            <a href="#">Карта сайта</a>
+        </div>
+    </div>
+</footer>
+<div class="dialogbox dialogbox-callback">
+    <div class="dialogbox__inner">
+        <div class="dialogbox__window">
+            <div class="dialogbox__close"></div>
+            <div class="contact__form">
+                <form action="#">
+                    <header class="block-header">
+                        <h2>Обратный звонок</h2>
+                    </header>
+                    <div class="dialogbox__inputs">
+                        <input type="text" name="name" placeholder="Имя">
+                        <input type="tel" name="phone" placeholder="Телефон">
+                    </div>
+                    <button class="btn-green">Отправить</button>
+                    <label class="checkbox">
+                        <input type="checkbox" class="custom-checkbox" checked="">
+                        <p>
+                            Я соглашаюсь с
+                            <a href="#">Политикой конфиденциальности</a>
+                            и
+                            <a href="#">Обработки персональных данных</a>
+                            .
+                        </p>
+                    </label>
+                    <footer class="contact-form__footer"></footer>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dialogbox dialogbox-order">
+    <div class="dialogbox__inner">
+        <div class="dialogbox__window">
+            <div class="dialogbox__close"></div>
+            <div class="contact__form">
+                <form action="#">
+                    <header class="block-header">
+                        <h2>Заказ экскурсии</h2>
+                    </header>
+                    <div class="dialogbox__inputs">
+                        <input type="text" name="name" placeholder="Имя">
+                        <input type="text" name="email" placeholder="E-mail">
+                        <input type="tel" name="phone" placeholder="Телефон">
+                    </div>
+                    <button class="btn-green">Отправить</button>
+                    <label class="checkbox">
+                        <input type="checkbox" class="custom-checkbox" checked="">
+                        <p>
+                            Я соглашаюсь с
+                            <a href="#">Политикой конфиденциальности</a>
+                            и
+                            <a href="#">Обработки персональных данных</a>
+                            .
+                        </p>
+                    </label>
+                    <footer class="contact-form__footer"></footer>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,743 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/svgicons/logo-small.svg">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-ui-slider@1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.8.3/css/lightgallery-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.8.3/css/lg-zoom.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script defer src="js/app.min.js"></script>
+    <title>Главная</title>
+</head>
+
+    <body>
+        <div class="wrapper">
+            <header class="header">
+    <div class="container">
+        <a href="/" class="header__logo">
+            <img src="img/svgicons/logo.svg" alt="logo">
+        </a>
+        <nav class="header__nav">
+            <button class="header-search__btn mobile">
+                <img src="img/svgicons/search.svg" alt="search">
+                Поиск
+            </button>
+            <a href="#">Квест-экскурсии</a>
+            <a href="#">Экскурсии</a>
+            <a href="#">Семейные путешествия</a>
+            <a href="#">На Новый год</a>
+            <a href="#">Отзывы</a>
+        </nav>
+        <nav class="header__btns">
+            <a href="tel:+7 (925) 081-89-09">
+                <p>+7 (925) 081-89-09</p>
+                <img src="img/svgicons/header-phone.svg" alt="header-phone">
+            </a>
+            <button class="header-search__btn">
+                <img src="img/svgicons/search.svg" alt="search">
+            </button>
+            <a href="#">
+                <img src="img/svgicons/watsapp.svg" alt="watsapp">
+            </a>
+            <a href="#">
+                <img src="img/svgicons/tg.svg" alt="tg">
+            </a>
+            <button class="btn-green">Заказать звонок</button>
+            <form action="#" class="header-search__form search">
+                <div class="container">
+                    <div class="header-search__close"></div>
+                    <input type="search" placeholder="Введите ваш запрос">
+                    <button type="submit">
+                        <img src="img/svgicons/search.svg" alt="">
+                    </button>
+                </div>
+            </form>
+        </nav>
+        <button class="header__burger">
+            <span></span>
+        </button>
+    </div>
+</header>
+<!-- <svg>
+    <use xlink:href="#favorite"></use>
+</svg> -->
+
+            <main class="content">
+                <section class="intro">
+                    <div class="container">
+                        <img src="img/svgicons/index/intro/left.svg" class="image-bg left" alt="">
+                        <img src="img/svgicons/index/intro/center.svg" class="image-bg center" alt="">
+                        <img src="img/svgicons/index/intro/right.svg" class="image-bg right" alt="">
+                        <header class="block-header center">
+                            <h1>Авторские квесты и экскурсии для школьников и дошкольников в Москве.
+                                <span>От 4 до 16 лет</span>
+                            </h1>
+                            <p>Forem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                        </header>
+                        <button class="btn-green btn-order">Заказать экскурсию</button>
+                    </div>
+                </section>
+                <section class="sub-intro">
+                    <div class="container">
+                        <img src="img/svgicons/index/subscribe-tg/content-left.svg" alt="">
+                        <div class="sub-intro__info">
+                            <p>Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque. Ut diam quam, semper iaculis condimentum ac, vestibulum eu nisl.</p>
+                            <a href="#" class="btn-green">
+                                Подпишитесь на наш Телеграм
+                                <img src="img/svgicons/tg-black.svg" alt="subscribe-tg">
+                            </a>
+                            <div class="sub-intro__btns-mobile">
+                                <a href="#" class="btn-green">
+                                    Задать вопрос в WhatsApp
+                                </a>
+                                <a href="#" class="btn-pink">
+                                    Купить билет в сборную группу
+                                </a>
+                            </div>
+                            <img src="img/svgicons/index/subscribe-tg/bg-1.svg" alt="subscribe-tg">
+                        </div>
+                    </div>
+                </section>
+                <section class="advantages section">
+                    <div class="container">
+                        <header class="block-header center">
+                            <h2>Почему выбирают нас</h2>
+                        </header>
+                        <main class="advantages__row">
+                            <div class="advantages__advantage">
+                                <img src="img/svgicons/index/advantages/1.svg" alt="advantage-img">
+                                <h3>
+                                    Лучший развивающий
+                                    <br>
+                                    досуг в Москве
+                                </h3>
+                            </div>
+                            <div class="advantages__advantage">
+                                <img src="img/svgicons/index/advantages/2.svg" alt="advantage-img">
+                                <h3>
+                                    Партнерство
+                                    <br>
+                                    с главными музеями
+                                </h3>
+                            </div>
+                            <div class="advantages__advantage">
+                                <img src="img/svgicons/index/advantages/3.svg" alt="advantage-img">
+                                <h3>
+                                    Скидки и автобус
+                                    <br>
+                                    для школьных групп
+                                </h3>
+                            </div>
+                            <div class="advantages__advantage">
+                                <img src="img/svgicons/index/advantages/4.svg" alt="advantage-img">
+                                <h3>Лучшие детские гиды Москвы</h3>
+                            </div>
+                            <div class="advantages__advantage">
+                                <img src="img/svgicons/index/advantages/5.svg" alt="advantage-img">
+                                <h3>Сборные группы каждую неделю</h3>
+                            </div>
+                            <div class="advantages__advantage">
+                                <img src="img/svgicons/index/advantages/6.svg" alt="advantage-img">
+                                <h3>Образовательная лицензия Правительства Москвы</h3>
+                            </div>
+                            <div class="advantages__advantage">
+                                <img src="img/svgicons/index/advantages/7.svg" alt="advantage-img">
+                                <h3>
+                                    Более 30 разных квестов
+                                    и экскурсий
+                                </h3>
+                            </div>
+                            <div class="advantages__advantage">
+                                <img src="img/svgicons/index/advantages/8.svg" alt="advantage-img">
+                                <h3>
+                                    Работа с детьми
+                                    <br>
+                                    с 2015 года
+                                </h3>
+                            </div>
+                            <div class="advantages__advantage">
+                                <img src="img/svgicons/index/advantages/9.svg" alt="advantage-img">
+                                <h3>Разработка квест-реконструкций для крупных фестивалей</h3>
+                            </div>
+                        </main>
+                    </div>
+                </section>
+                <section class="types-quests section">
+                    <div class="container">
+                        <header class="block-header center">
+                            <h2>Виды квестов</h2>
+                        </header>
+                        <main class="types-quests__main">
+                            <a href="#" class="types-quests__quest">
+                                <h3>Афиша сборных групп</h3>
+                                <img src="img/svgicons/index/types/1.svg" alt="">
+                            </a>
+                            <a href="#" class="types-quests__quest">
+                                <h3>Экскурсии</h3>
+                                <img src="img/svgicons/index/types/2.svg" alt="">
+                            </a>
+                            <a href="#" class="types-quests__quest">
+                                <h3>Квест-экскурсии</h3>
+                                <img src="img/svgicons/index/types/3.svg" alt="">
+                            </a>
+                            <a href="#" class="types-quests__quest">
+                                <h3>Семейные путешествия</h3>
+                                <img src="img/svgicons/index/types/4.svg" alt="">
+                            </a>
+                        </main>
+                    </div>
+                </section>
+                <article class="tabs article">
+                    <div class="container">
+                        <header class="tabs__header">
+                            <div class="tabs__scroll">
+                                <nav class="tabs__links">
+                                    <a href="#">Все</a>
+                                    <a href="#">Квест-экскурсии</a>
+                                    <a href="#">Экскурсии</a>
+                                    <a href="#">Пушкинский музей</a>
+                                </nav>
+                                <a href="#" class="btn-green">Сборные группы</a>
+                            </div>
+                            <div class="filter right">
+                                <button class="filter__btn">
+                                    <img src="img/svgicons/filter.svg" alt="filter">
+                                </button>
+                                <div class="filter__body">
+                                    <label>
+                                        <p>Сперва новые</p>
+                                        <input type="checkbox">
+                                        <img src="img/svgicons/checked.svg" alt="checked">
+                                    </label>
+                                    <label>
+                                        <p>Сперва старые</p>
+                                        <input type="checkbox">
+                                        <img src="img/svgicons/checked.svg" alt="checked">
+                                    </label>
+                                    <label>
+                                        <p>Положительные оценки</p>
+                                        <input type="checkbox">
+                                        <img src="img/svgicons/checked.svg" alt="checked">
+                                    </label>
+                                </div>
+                            </div>
+                        </header>
+                        <main class="tabs__tabs">
+                            <div class="tabs__tab">
+                                <div class="tabs__content items__row">
+                                    <article class="item">
+                                        <div class="item__img">
+                                            <div class="item__labels">
+                                                <p>6-8 лет</p>
+                                            </div>
+                                            <img src="img/catalog/1.png" alt="">
+                                        </div>
+                                        <header class="item__header">
+                                            <h3>Секреты космических полетов</h3>
+                                            <p>Gorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                                        </header>
+                                        <p>Музей Космонавтики</p>
+                                        <footer class="item__footer">
+                                            <div class="item__price">
+                                                <p>от 1500 руб.</p>
+                                                <p>1.5 часа</p>
+                                            </div>
+                                            <a href="#" class="btn-green">Записаться</a>
+                                        </footer>
+                                    </article>
+                                    <article class="item">
+                                        <div class="item__img">
+                                            <div class="item__labels">
+                                                <p>6-8 лет</p>
+                                            </div>
+                                            <img src="img/catalog/2.png" alt="">
+                                        </div>
+                                        <header class="item__header">
+                                            <h3>Секреты космических полетов</h3>
+                                            <p>Gorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                                        </header>
+                                        <p>Музей Космонавтики</p>
+                                        <footer class="item__footer">
+                                            <div class="item__price">
+                                                <p>от 1500 руб.</p>
+                                                <p>1.5 часа</p>
+                                            </div>
+                                            <a href="#" class="btn-green">Записаться</a>
+                                        </footer>
+                                    </article>
+                                    <article class="item">
+                                        <div class="item__img">
+                                            <div class="item__labels">
+                                                <p>6-8 лет</p>
+                                            </div>
+                                            <img src="img/catalog/3.png" alt="">
+                                        </div>
+                                        <header class="item__header">
+                                            <h3>Секреты космических полетов</h3>
+                                            <p>Gorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                                        </header>
+                                        <p>Музей Космонавтики</p>
+                                        <footer class="item__footer">
+                                            <div class="item__price">
+                                                <p>от 1500 руб.</p>
+                                                <p>1.5 часа</p>
+                                            </div>
+                                            <a href="#" class="btn-green">Записаться</a>
+                                        </footer>
+                                    </article>
+                                    <article class="item">
+                                        <div class="item__img">
+                                            <div class="item__labels">
+                                                <p>6-8 лет</p>
+                                            </div>
+                                            <img src="img/catalog/1.png" alt="">
+                                        </div>
+                                        <header class="item__header">
+                                            <h3>Секреты космических полетов</h3>
+                                            <p>Gorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                                        </header>
+                                        <p>Музей Космонавтики</p>
+                                        <footer class="item__footer">
+                                            <div class="item__price">
+                                                <p>от 1500 руб.</p>
+                                                <p>1.5 часа</p>
+                                            </div>
+                                            <a href="#" class="btn-green">Записаться</a>
+                                        </footer>
+                                    </article>
+                                    <article class="item">
+                                        <div class="item__img">
+                                            <div class="item__labels">
+                                                <p>6-8 лет</p>
+                                            </div>
+                                            <img src="img/catalog/2.png" alt="">
+                                        </div>
+                                        <header class="item__header">
+                                            <h3>Секреты космических полетов</h3>
+                                            <p>Gorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                                        </header>
+                                        <p>Музей Космонавтики</p>
+                                        <footer class="item__footer">
+                                            <div class="item__price">
+                                                <p>от 1500 руб.</p>
+                                                <p>1.5 часа</p>
+                                            </div>
+                                            <a href="#" class="btn-green">Записаться</a>
+                                        </footer>
+                                    </article>
+                                    <article class="item">
+                                        <div class="item__img">
+                                            <div class="item__labels">
+                                                <p>6-8 лет</p>
+                                            </div>
+                                            <img src="img/catalog/3.png" alt="">
+                                        </div>
+                                        <header class="item__header">
+                                            <h3>Секреты космических полетов</h3>
+                                            <p>Gorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                                        </header>
+                                        <p>Музей Космонавтики</p>
+                                        <footer class="item__footer">
+                                            <div class="item__price">
+                                                <p>от 1500 руб.</p>
+                                                <p>1.5 часа</p>
+                                            </div>
+                                            <a href="#" class="btn-green">Записаться</a>
+                                        </footer>
+                                    </article>
+                                </div>
+                                <div class="tabs__content items__row hidden-content">
+                                    <article class="item">
+                                        <div class="item__img">
+                                            <div class="item__labels">
+                                                <p>6-8 лет</p>
+                                            </div>
+                                            <img src="img/catalog/1.png" alt="">
+                                        </div>
+                                        <header class="item__header">
+                                            <h3>Секреты космических полетов</h3>
+                                            <p>Gorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                                        </header>
+                                        <p>Музей Космонавтики</p>
+                                        <footer class="item__footer">
+                                            <div class="item__price">
+                                                <p>от 1500 руб.</p>
+                                                <p>1.5 часа</p>
+                                            </div>
+                                            <a href="#" class="btn-green">Записаться</a>
+                                        </footer>
+                                    </article>
+                                    <article class="item">
+                                        <div class="item__img">
+                                            <div class="item__labels">
+                                                <p>6-8 лет</p>
+                                            </div>
+                                            <img src="img/catalog/2.png" alt="">
+                                        </div>
+                                        <header class="item__header">
+                                            <h3>Секреты космических полетов</h3>
+                                            <p>Gorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                                        </header>
+                                        <p>Музей Космонавтики</p>
+                                        <footer class="item__footer">
+                                            <div class="item__price">
+                                                <p>от 1500 руб.</p>
+                                                <p>1.5 часа</p>
+                                            </div>
+                                            <a href="#" class="btn-green">Записаться</a>
+                                        </footer>
+                                    </article>
+                                    <article class="item">
+                                        <div class="item__img">
+                                            <div class="item__labels">
+                                                <p>6-8 лет</p>
+                                            </div>
+                                            <img src="img/catalog/3.png" alt="">
+                                        </div>
+                                        <header class="item__header">
+                                            <h3>Секреты космических полетов</h3>
+                                            <p>Gorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                                        </header>
+                                        <p>Музей Космонавтики</p>
+                                        <footer class="item__footer">
+                                            <div class="item__price">
+                                                <p>от 1500 руб.</p>
+                                                <p>1.5 часа</p>
+                                            </div>
+                                            <a href="#" class="btn-green">Записаться</a>
+                                        </footer>
+                                    </article>
+                                </div>
+                                <button class="btn-pink more-btn">
+                                    Загрузить еще
+                                    <img src="img/svgicons/plus.svg" alt="">
+                                </button>
+                            </div>
+                        </main>
+                    </div>
+                </article>
+                <article class="search-article">
+                    <div class="container">
+                        <img src="img/svgicons/search-content.svg" alt="search-content">
+                        <form action="#" class="search">
+                            <input type="search" placeholder="Найти экскурсию">
+                            <img src="img/svgicons/search.svg" alt="search-btn">
+                        </form>
+                        <div class="dropdown">
+                            <header class="dropdown__header">
+                                <p>По возрасту</p>
+                                <img src="img/svgicons/arrow-down-black.svg" alt="">
+                            </header>
+                            <main class="dropdown__body">
+                                <label>
+                                    <p>Вариант 1</p>
+                                    <input type="radio" name="var-1">
+                                    <img src="img/svgicons/checked.svg" alt="checked">
+                                </label>
+                                <label>
+                                    <p>Вариант 2</p>
+                                    <input type="radio" name="var-1">
+                                    <img src="img/svgicons/checked.svg" alt="checked">
+                                </label>
+                                <label>
+                                    <p>Вариант 3</p>
+                                    <input type="radio" name="var-1">
+                                    <img src="img/svgicons/checked.svg" alt="checked">
+                                </label>
+                            </main>
+                        </div>
+                        <div class="dropdown">
+                            <header class="dropdown__header">
+                                <p>По классу</p>
+                                <img src="img/svgicons/arrow-down-black.svg" alt="">
+                            </header>
+                            <main class="dropdown__body">
+                                <label>
+                                    <p>Вариант 1</p>
+                                    <input type="radio" name="var-2">
+                                    <img src="img/svgicons/checked.svg" alt="checked">
+                                </label>
+                                <label>
+                                    <p>Вариант 2</p>
+                                    <input type="radio" name="var-2">
+                                    <img src="img/svgicons/checked.svg" alt="checked">
+                                </label>
+                                <label>
+                                    <p>Вариант 3</p>
+                                    <input type="radio" name="var-2">
+                                    <img src="img/svgicons/checked.svg" alt="checked">
+                                </label>
+                            </main>
+                        </div>
+                    </div>
+                </article>
+                <article class="reviews-slider article">
+                    <div class="container">
+                        <header class="block-header center">
+                            <h2>Отзывы</h2>
+                        </header>
+                        <div class="swiper-container">
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide reviews-item">
+                                        <h3>Иванов Иван</h3>
+                                        <div class="reviews-item__stars">
+                                            <img src="img/svgicons/star-fill.svg" alt="">
+                                            <img src="img/svgicons/star-fill.svg" alt="">
+                                            <img src="img/svgicons/star-fill.svg" alt="">
+                                            <img src="img/svgicons/star-half.svg" alt="">
+                                            <img src="img/svgicons/star.svg" alt="">
+                                        </div>
+                                        <p>Gorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                                        <time datetime="2025-04-10">10.04.2025</time>
+                                    </div>
+                                    <div class="swiper-slide reviews-item">
+                                        <h3>Иванов Иван</h3>
+                                        <div class="reviews-item__stars">
+                                            <img src="img/svgicons/star-fill.svg" alt="">
+                                            <img src="img/svgicons/star-fill.svg" alt="">
+                                            <img src="img/svgicons/star-fill.svg" alt="">
+                                            <img src="img/svgicons/star-half.svg" alt="">
+                                            <img src="img/svgicons/star.svg" alt="">
+                                        </div>
+                                        <p>Gorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                                        <time datetime="2025-04-10">10.04.2025</time>
+                                    </div>
+                                    <div class="swiper-slide reviews-item">
+                                        <h3>Иванов Иван</h3>
+                                        <div class="reviews-item__stars">
+                                            <img src="img/svgicons/star-fill.svg" alt="">
+                                            <img src="img/svgicons/star-fill.svg" alt="">
+                                            <img src="img/svgicons/star-fill.svg" alt="">
+                                            <img src="img/svgicons/star-half.svg" alt="">
+                                            <img src="img/svgicons/star.svg" alt="">
+                                        </div>
+                                        <p>Gorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                                        <time datetime="2025-04-10">10.04.2025</time>
+                                    </div>
+                                    <div class="swiper-slide reviews-item">
+                                        <h3>Иванов Иван</h3>
+                                        <div class="reviews-item__stars">
+                                            <img src="img/svgicons/star-fill.svg" alt="">
+                                            <img src="img/svgicons/star-fill.svg" alt="">
+                                            <img src="img/svgicons/star-fill.svg" alt="">
+                                            <img src="img/svgicons/star-half.svg" alt="">
+                                            <img src="img/svgicons/star.svg" alt="">
+                                        </div>
+                                        <p>Gorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                                        <time datetime="2025-04-10">10.04.2025</time>
+                                    </div>
+                                    <div class="swiper-slide reviews-item">
+                                        <h3>Иванов Иван</h3>
+                                        <div class="reviews-item__stars">
+                                            <img src="img/svgicons/star-fill.svg" alt="">
+                                            <img src="img/svgicons/star-fill.svg" alt="">
+                                            <img src="img/svgicons/star-fill.svg" alt="">
+                                            <img src="img/svgicons/star-half.svg" alt="">
+                                            <img src="img/svgicons/star.svg" alt="">
+                                        </div>
+                                        <p>Gorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                                        <time datetime="2025-04-10">10.04.2025</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <article class="reviews__show-more">
+                            <a href="#" class="btn-pink">
+                                Смотреть все отзывы
+                            </a>
+                            <img src="img/svgicons/reviews-more.svg" alt="reviews-more">
+                        </article>
+                    </div>
+                </article>
+                <article class="subcribe-tg article">
+                    <div class="container">
+                        <main class="subcribe-tg__main">
+                            <h2>Подпишитесь на наш Телеграм</h2>
+                            <p>Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu.</p>
+                            <a href="#" class="btn-green">
+                                Подписаться
+                                <img src="img/svgicons/tg-black.svg" alt="">
+                            </a>
+                        </main>
+                        <img src="img/svgicons/index/subscribe-tg/content-right.svg" alt="">
+                    </div>
+                </article>
+            </main>
+            <footer class="footer">
+    <div class="container">
+        <div class="footer__item info">
+            <header class="footer__header">
+                <h2>Информация</h2>
+                <img src="img/svgicons/arrow-down.svg" alt="">
+            </header>
+            <nav class="footer__nav">
+                <a href="#">Главная</a>
+                <a href="#">Квест-экскурсии</a>
+                <a href="#">Экскурсии</a>
+                <a href="#">Афиши сборных групп</a>
+                <a href="#">Пушкинский музей</a>
+                <a href="#">На новый год</a>
+                <a href="#">Семейные путешествия</a>
+                <a href="#">Отзывы</a>
+                <a href="#">Оплата</a>
+                <a href="#">Блог</a>
+                <a href="#">Фото-видео</a>
+                <a href="#">Контакты</a>
+            </nav>
+        </div>
+        <div class="footer__item quests">
+            <header class="footer__header">
+                <h2>Квест-экскурсии</h2>
+                <img src="img/svgicons/arrow-down.svg" alt="">
+            </header>
+            <nav class="footer__nav">
+                <a href="#">Как жили на Руси в прошлом</a>
+                <a href="#">Тайна древней карты Кремля</a>
+                <a href="#">Секреты космических полетов</a>
+            </nav>
+        </div>
+        <div class="footer__item pushkin">
+            <header class="footer__header">
+                <h2>Пушкинский музей</h2>
+                <img src="img/svgicons/arrow-down.svg" alt="">
+            </header>
+            <nav class="footer__nav">
+                <a href="#">Импрессионисты открывают мир</a>
+                <a href="#">Тайны Микеланджело</a>
+                <a href="#">Прогулка по Древнему Египту</a>
+            </nav>
+        </div>
+        <div class="footer__item contacts">
+            <header class="footer__header">
+                <h2>Контакты</h2>
+                <img src="img/svgicons/arrow-down.svg" alt="">
+            </header>
+            <nav class="footer__nav">
+                <a href="tel:+7 (925) 081-89-09">+7 (925) 081-89-09</a>
+                <a href="mailto:kvestvmuzee@gmail.com">kvestvmuzee@gmail.com</a>
+                <p>127521, г. Москва, Ул Октябрьская, д 80, стр 3, офис 3307-2</p>
+                <p>пн.-вс. с 9.00 до 21.00</p>
+                <div class="socials">
+                    <a href="#">
+                        <img src="img/svgicons/watsapp.svg" alt="watsapp">
+                    </a>
+                    <a href="#">
+                        <img src="img/svgicons/tg.svg" alt="tg">
+                    </a>
+                </div>
+            </nav>
+            <button class="btn-green btn-callback">Заказать звонок</button>
+        </div>
+        <div class="footer__item excursions">
+            <header class="footer__header">
+                <h2>Экскурсии</h2>
+                <img src="img/svgicons/arrow-down.svg" alt="">
+            </header>
+            <nav class="footer__nav">
+                <a href="#">Как жили на Руси в прошлом</a>
+                <a href="#">Тайна древней карты Кремля</a>
+                <a href="#">Секреты космических полетов</a>
+            </nav>
+        </div>
+        <div class="footer__item new-year">
+            <header class="footer__header">
+                <h2>Квесты на Новый год</h2>
+                <img src="img/svgicons/arrow-down.svg" alt="">
+            </header>
+            <nav class="footer__nav">
+                <a href="#">Новогодние сказания Руси</a>
+                <a href="#">Волшебная подкова Деда мороза</a>
+            </nav>
+        </div>
+        <div class="footer__item logo">
+            <a href="#" class="footer__logo">
+                <img src="img/svgicons/logo-footer.svg" alt="">
+            </a>
+            <p>© 2025 kvestvmuzee.ru</p>
+        </div>
+        <div class="footer__item copy">
+            <a href="#">Политика конфиденциальности</a>
+            <a href="#">Оферта на предоставление услуг</a>
+            <a href="#">Карта сайта</a>
+        </div>
+    </div>
+</footer>
+<div class="dialogbox dialogbox-callback">
+    <div class="dialogbox__inner">
+        <div class="dialogbox__window">
+            <div class="dialogbox__close"></div>
+            <div class="contact__form">
+                <form action="#">
+                    <header class="block-header">
+                        <h2>Обратный звонок</h2>
+                    </header>
+                    <div class="dialogbox__inputs">
+                        <input type="text" name="name" placeholder="Имя">
+                        <input type="tel" name="phone" placeholder="Телефон">
+                    </div>
+                    <button class="btn-green">Отправить</button>
+                    <label class="checkbox">
+                        <input type="checkbox" class="custom-checkbox" checked="">
+                        <p>
+                            Я соглашаюсь с
+                            <a href="#">Политикой конфиденциальности</a>
+                            и
+                            <a href="#">Обработки персональных данных</a>
+                            .
+                        </p>
+                    </label>
+                    <footer class="contact-form__footer"></footer>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dialogbox dialogbox-order">
+    <div class="dialogbox__inner">
+        <div class="dialogbox__window">
+            <div class="dialogbox__close"></div>
+            <div class="contact__form">
+                <form action="#">
+                    <header class="block-header">
+                        <h2>Заказ экскурсии</h2>
+                    </header>
+                    <div class="dialogbox__inputs">
+                        <input type="text" name="name" placeholder="Имя">
+                        <input type="text" name="email" placeholder="E-mail">
+                        <input type="tel" name="phone" placeholder="Телефон">
+                    </div>
+                    <button class="btn-green">Отправить</button>
+                    <label class="checkbox">
+                        <input type="checkbox" class="custom-checkbox" checked="">
+                        <p>
+                            Я соглашаюсь с
+                            <a href="#">Политикой конфиденциальности</a>
+                            и
+                            <a href="#">Обработки персональных данных</a>
+                            .
+                        </p>
+                    </label>
+                    <footer class="contact-form__footer"></footer>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </body>
+</html>
