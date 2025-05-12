@@ -857,6 +857,9 @@ ul li {
 .subcribe-tg__main p {
   margin-bottom: 40px;
 }
+.subcribe-tg__main .btn-green {
+  padding: 16px 40px;
+}
 .subcribe-tg > img {
   transform: translate(0px, 40px);
 }
@@ -959,6 +962,12 @@ ul li {
   aspect-ratio: 2.32/1.44;
   border-radius: 24px;
   overflow: hidden;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 300ms ease;
+}
+.excursion-main__thumb .swiper-slide.swiper-slide-thumb-active {
+  opacity: 1;
 }
 .excursion-main__thumb .swiper-slide img, .excursion-main__thumb .swiper-slide video {
   display: block;
@@ -1650,8 +1659,8 @@ ul li {
   transform: translate(-50%, 0px);
 }
 .intro .image-bg.road {
-  width: 2034px;
-  height: 665px;
+  width: 100%;
+  height: auto;
   bottom: 0px;
   left: 50%;
   transform: translate(-50%, 0%);
@@ -2018,6 +2027,13 @@ body {
   }
   .content {
     padding-top: 120px;
+  }
+  .intro .image-bg.road {
+    width: 2040px;
+    height: 665px;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, 0%);
   }
 }
 @media only screen and (max-width: 1280px) {
