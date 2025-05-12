@@ -926,6 +926,7 @@ ul li {
   display: flex;
   gap: 24px;
   padding-bottom: 80px;
+  align-items: stretch;
 }
 .excursion-main__info {
   flex: 1 1 auto;
@@ -942,7 +943,7 @@ ul li {
   border-radius: 24px;
   overflow: hidden;
 }
-.excursion-main__slider .swiper-slide img {
+.excursion-main__slider .swiper-slide img, .excursion-main__slider .swiper-slide video {
   display: block;
   width: 100%;
   height: 100%;
@@ -959,11 +960,32 @@ ul li {
   border-radius: 24px;
   overflow: hidden;
 }
-.excursion-main__thumb .swiper-slide img {
+.excursion-main__thumb .swiper-slide img, .excursion-main__thumb .swiper-slide video {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.excursion-main__thumb .swiper-slide:has(video) {
+  position: relative;
+}
+.excursion-main__thumb .swiper-slide:has(video)::after {
+  content: "▸";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background: rgba(21, 19, 20, 0.7);
+  font-size: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 50%;
+  padding-bottom: 5px;
+  padding-left: 5px;
 }
 .excursion-main__text {
   margin-bottom: 120px;
@@ -1023,11 +1045,13 @@ ul li {
   margin-top: 24px;
 }
 .excursion-main__aside {
+  position: relative;
   flex: 1 1 auto;
 }
 .excursion-main__form {
-  margin-top: 80px;
   width: 100%;
+  max-width: 1056px;
+  margin: 80px auto 0;
 }
 .excursion-main__form h3 {
   margin-bottom: 40px;
@@ -1055,16 +1079,12 @@ ul li {
   max-width: 50%;
 }
 
-.excursion-aside {
-  position: relative;
-}
 .excursion-aside__prices {
-  position: sticky;
-  top: 120px;
-  right: 0px;
   border-radius: 24px;
   padding: 40px 24px;
   background: #ebeaea;
+  position: sticky;
+  top: 0px;
 }
 .excursion-aside__header {
   margin-bottom: 24px;
@@ -1081,6 +1101,7 @@ ul li {
 }
 .excursion-aside__childrens > .btn-green {
   margin-top: 24px;
+  max-width: 100%;
 }
 .excursion-aside__count-header {
   display: flex;
@@ -1507,7 +1528,7 @@ ul li {
   opacity: 0.7;
 }
 .header__logo {
-  width: 162px;
+  width: 175px;
   height: 64px;
   position: relative;
 }
@@ -1606,6 +1627,7 @@ ul li {
 .intro {
   padding: 104px 0px 53px;
   height: 960px;
+  position: relative;
 }
 .intro .container {
   height: 100%;
@@ -1626,6 +1648,13 @@ ul li {
   left: 50%;
   bottom: 53px;
   transform: translate(-50%, 0px);
+}
+.intro .image-bg.road {
+  width: 2034px;
+  height: 665px;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%, 0%);
 }
 .intro .block-header {
   max-width: 968px;
@@ -2057,6 +2086,11 @@ body {
   .reviews .reviews-item {
     flex: 0 0 242px;
   }
+  .excursion-main__thumb .swiper-slide:has(video)::after {
+    width: 40px;
+    height: 40px;
+    font-size: 50px;
+  }
 }
 @media only screen and (max-width: 992px) {
   .content {
@@ -2424,6 +2458,12 @@ body {
   }
 }
 @media only screen and (max-width: 576px) {
+  .contacts .container {
+    grid-template-columns: 1fr;
+  }
+  .contacts iframe {
+    height: 454px;
+  }
   .container {
     padding: 0px 24px;
   }
@@ -2487,6 +2527,11 @@ body {
   .intro .image-bg.center {
     width: 180px;
     bottom: 13px;
+  }
+  .intro .image-bg.road {
+    width: 800px;
+    height: 260px;
+    bottom: 0px;
   }
   .sub-intro {
     padding-top: 40px;
