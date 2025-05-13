@@ -936,6 +936,9 @@ ul li {
   flex: 1 1 auto;
   max-width: calc(100% - 608px);
 }
+.excursion-main__info .excursion-header__counts {
+  display: none;
+}
 .excursion-main__slider {
   flex: 1 1 auto;
   width: 100%;
@@ -2222,6 +2225,15 @@ body {
     opacity: 1;
     z-index: 0;
   }
+  .header__nav a.hidden {
+    display: block;
+  }
+  .header__nav a:has(svg) svg {
+    display: none;
+  }
+  .header__nav a:has(svg):hover + .header-dropdown {
+    display: none;
+  }
   .header__btns {
     margin-left: auto;
   }
@@ -2241,6 +2253,9 @@ body {
     padding: 12px 20.5px;
   }
   .header__btns .header-search__btn {
+    display: none;
+  }
+  .header-dropdown:hover {
     display: none;
   }
   .header-search__btn.mobile {
