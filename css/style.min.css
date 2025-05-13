@@ -387,7 +387,7 @@ ul li {
 
 .article,
 .section {
-  padding: 80px 0px;
+  padding: 40px 0px;
 }
 
 .filter {
@@ -575,6 +575,7 @@ ul li {
   display: flex;
   align-items: center;
   gap: 16px;
+  flex: 1 1 auto;
 }
 .tabs__links a {
   display: flex;
@@ -812,7 +813,7 @@ ul li {
   justify-content: center;
   border-radius: 11px;
   padding: 11px 16px;
-  background: #f1f0f0;
+  background: #ebeaea;
   width: 40px;
   height: 40px;
   transform: none;
@@ -893,11 +894,11 @@ ul li {
 }
 
 .excursion-header__header {
-  max-width: calc(100% - 464px - 24px);
   display: flex;
   gap: 24px;
   align-items: center;
   margin-bottom: 24px;
+  justify-content: space-between;
 }
 .excursion-header__counts {
   display: flex;
@@ -933,7 +934,7 @@ ul li {
 }
 .excursion-main__info {
   flex: 1 1 auto;
-  max-width: calc(100% - 488px);
+  max-width: calc(100% - 608px);
 }
 .excursion-main__slider {
   flex: 1 1 auto;
@@ -997,7 +998,7 @@ ul li {
   padding-left: 5px;
 }
 .excursion-main__text {
-  margin-bottom: 120px;
+  margin-bottom: 50px;
 }
 .excursion-main__prev {
   left: 8px;
@@ -1060,7 +1061,7 @@ ul li {
 .excursion-main__form {
   width: 100%;
   max-width: 1056px;
-  margin: 80px auto 0;
+  margin: 50px auto 0;
 }
 .excursion-main__form h3 {
   margin-bottom: 40px;
@@ -1186,6 +1187,9 @@ ul li {
   opacity: 1;
 }
 
+.ceo.mobile {
+  display: none;
+}
 .ceo__mb-64 {
   margin-bottom: 64px;
 }
@@ -1562,6 +1566,12 @@ ul li {
 .header__nav a:hover {
   color: #5a5758;
 }
+.header__nav a > svg {
+  display: none;
+}
+.header-dropdown {
+  display: none;
+}
 .header__btns {
   display: flex;
   align-items: center;
@@ -1634,7 +1644,7 @@ ul li {
 }
 
 .intro {
-  padding: 104px 0px 53px;
+  padding: 60px 0px 53px;
   height: 960px;
   position: relative;
 }
@@ -1681,12 +1691,12 @@ ul li {
   margin: 0 auto;
 }
 
-.sub-intro .container {
+.sub-intro__row {
   display: flex;
   gap: 90px;
   justify-content: center;
 }
-.sub-intro .container > img {
+.sub-intro__row > img {
   display: block;
   max-width: 480px;
   width: 100%;
@@ -1985,7 +1995,13 @@ body {
   padding: 0px 80px;
 }
 
-@media only screen and (max-width: 1440px) {
+@media only screen and (max-width: 1600px) {
+  .advantages__advantage h3 {
+    font-size: 22px;
+  }
+  .advantages__advantage img {
+    width: 100%;
+  }
   .header {
     padding: 8px 0px 18px;
   }
@@ -1998,6 +2014,8 @@ body {
     order: 3;
     justify-content: space-between;
   }
+}
+@media only screen and (max-width: 1440px) {
   .excursion-main .container {
     display: flex;
     gap: 24px;
@@ -2005,10 +2023,7 @@ body {
   }
   .excursion-main__info {
     flex: 1 1 auto;
-    max-width: calc(100% - 331px - 24px);
-  }
-  .excursion-header__header {
-    max-width: calc(100% - 331px - 24px);
+    max-width: calc(100% - 431px - 24px);
   }
   .excursion-aside__count label, .excursion-aside__groups label {
     gap: 5px;
@@ -2037,6 +2052,52 @@ body {
   }
 }
 @media only screen and (max-width: 1280px) {
+  .header .container {
+    flex-wrap: nowrap;
+  }
+  .header__nav {
+    flex: 1 1 auto;
+    order: unset;
+    justify-content: flex-start;
+    position: relative;
+  }
+  .header__nav a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .header__nav a.hidden {
+    display: none;
+  }
+  .header__nav a svg {
+    display: block;
+    padding: 8px;
+  }
+  .header__nav a:has(svg):hover + .header-dropdown {
+    display: block;
+  }
+  .header-dropdown {
+    display: none;
+    position: absolute;
+    top: 20px;
+    padding-top: 20px;
+    left: -16px;
+  }
+  .header-dropdown__row {
+    background: #f7f5f6;
+    box-shadow: 0 12px 24px 0 rgba(21, 19, 20, 0.16);
+    border-radius: 16px;
+    padding: 16px;
+  }
+  .header-dropdown:hover {
+    display: block;
+  }
+  .header-dropdown a {
+    display: block;
+  }
+  .header-dropdown a:not(:last-child) {
+    margin-bottom: 8px;
+  }
   .intro .image-bg.left {
     left: 88px;
     width: 216px;
@@ -2044,6 +2105,9 @@ body {
   }
   .intro .image-bg.right {
     right: 100px;
+  }
+  .sub-intro__row > img {
+    max-width: 35%;
   }
   .sub-intro__info > img {
     margin-right: 0px;
@@ -2114,7 +2178,7 @@ body {
   }
   .article,
   .section {
-    padding: 40px 0px;
+    padding: 20px 0px;
   }
   h1 {
     font-size: 32px;
@@ -2193,7 +2257,7 @@ body {
     color: #151314;
   }
   .intro .block-header h1 {
-    font-size: 40px;
+    font-size: 32px;
   }
   .intro .image-bg.left {
     left: 0px;
@@ -2201,10 +2265,10 @@ body {
   .intro .image-bg.right {
     right: 20px;
   }
-  .sub-intro .container {
+  .sub-intro__row {
     gap: 40px;
   }
-  .sub-intro .container > img {
+  .sub-intro__row > img {
     aspect-ratio: 1/1;
     max-width: 400px;
     width: 40%;
@@ -2487,7 +2551,7 @@ body {
     margin: 0px 24px;
   }
   h2 {
-    font-size: 32px;
+    font-size: 28px;
   }
   .btn-pink {
     font-size: 20px;
@@ -2552,7 +2616,7 @@ body {
   .sub-intro {
     padding-top: 40px;
   }
-  .sub-intro .container > img {
+  .sub-intro__row > img {
     display: none;
   }
   .sub-intro__info {
@@ -2664,6 +2728,15 @@ body {
   .swiper-button-next {
     display: none;
   }
+  .breadcrumbs {
+    padding-top: 16px;
+  }
+  .breadcrumbs a, .breadcrumbs p, .breadcrumbs span {
+    font-size: 14px;
+  }
+  .breadcrumbs__row {
+    margin-bottom: 16px;
+  }
   .excursion-main .container {
     gap: 24px;
     padding-bottom: 40px;
@@ -2677,6 +2750,9 @@ body {
   .excursion-main__info .btn-green {
     font-size: 20px;
     max-width: 100%;
+  }
+  .excursion-main__info .excursion-header__counts {
+    display: flex;
   }
   .excursion-main__inputs {
     grid-template-columns: auto;
@@ -2700,13 +2776,30 @@ body {
   .excursion-aside__childrens, .excursion-aside__groups {
     flex: 1 1 100%;
   }
-  .ceo .block-header:has(img) *:not(h1):not(img) {
+  .excursion-header h1 {
+    font-size: 28px;
+  }
+  .excursion-header__counts {
+    display: none;
+    margin-bottom: 24px;
+  }
+  .ceo .block-header {
+    margin-bottom: 24px;
+  }
+  .ceo .block-header p {
     display: none;
   }
-  .ceo .block-header:has(img) img {
+  .ceo .block-header h1 {
+    font-size: 28px;
+  }
+  .ceo.mobile {
     display: block;
-    max-width: 402px;
-    margin: 24px auto 0px;
+  }
+  .ceo.mobile .block-header {
+    margin-bottom: 0px;
+  }
+  .ceo.mobile .block-header p {
+    display: block;
   }
   .ceo.new-year {
     overflow: hidden;
@@ -2744,6 +2837,9 @@ body {
   }
   .ceo.new-year .right {
     display: none;
+  }
+  .items {
+    padding-top: 0px;
   }
   .items .item__img {
     height: 240px;
@@ -2838,7 +2934,9 @@ body {
   }
 }
 @media only screen and (max-width: 378px) {
-  .types-quests__main {
-    grid-template-columns: auto;
+  .excursion-aside__groups label {
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
   }
 }

@@ -33,10 +33,34 @@
                 <img src="img/svgicons/search.svg" alt="search">
                 Поиск
             </button>
-            <a href="#">Квест-экскурсии</a>
-            <a href="#">Экскурсии</a>
-            <a href="#">Семейные путешествия</a>
-            <a href="#">На Новый год</a>
+            <a href="#" class="hidden">Квест-экскурсии</a>
+            <a href="#">
+                Экскурсии
+                <svg
+                    width="30"
+                    height="24"
+                    viewBox="0 0 14 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M1 1L7 7L13 1"
+                        stroke="#151314"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+                </svg>
+            </a>
+            <div class="header-dropdown">
+                <div class="header-dropdown__row">
+                    <a href="#">Квест-экскурсии</a>
+                    <a href="#">Семейные путешествия</a>
+                    <a href="#">На Новый год</a>
+                </div>
+            </div>
+            <a href="#" class="hidden">Семейные путешествия</a>
+            <a href="#" class="hidden">На Новый год</a>
             <a href="#">Отзывы</a>
         </nav>
         <nav class="header__btns">
@@ -107,10 +131,6 @@
                                 </div>
                             </div>
                         </header>
-                        <a href="#" class="geo">
-                            <img src="img/svgicons/geo-red.svg" alt="">
-                            Смотреть карту
-                        </a>
                     </div>
                 </article>
                 <article class="excursion-main">
@@ -162,6 +182,23 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="excursion-header__counts">
+                                <div class="excursion-header__count">
+                                    <p>1.5 часа</p>
+                                    <p>Длительность</p>
+                                </div>
+                                <div class="excursion-header__count">
+                                    <p>
+                                        4.8
+                                        <img src="img/svgicons/star-fill.svg" alt="">
+                                    </p>
+                                    <p>128 оценок</p>
+                                </div>
+                            </div>
+                            <a href="#" class="geo">
+                                <img src="img/svgicons/geo-red.svg" alt="">
+                                Смотреть карту
+                            </a>
                             <div class="excursion-main__text">
                                 <p>Во время настоящего космического путешествя дети узнают:</p>
                                 <ul>
@@ -182,66 +219,6 @@
                                 </ul>
                                 <a href="#" class="btn-green">Заказать экскурсию</a>
                             </div>
-                        </div>
-                        <aside class="excursion-main__aside excursion-aside">
-                            <div class="excursion-aside__prices">
-                                <header class="excursion-aside__header">
-                                    <h3>Стоимость</h3>
-                                    <p>Sorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
-                                </header>
-                                <main class="excursion-aside__main">
-                                    <div class="excursion-aside__childrens">
-                                        <div class="excursion-aside__count">
-                                            <div class="excursion-aside__count-header">
-                                                <p>Размер группы</p>
-                                                <p>За человека</p>
-                                            </div>
-                                            <label>
-                                                <p>От 6 до 8 детей</p>
-                                                <p>2050 руб.</p>
-                                                <input type="radio" name="price-1">
-                                            </label>
-                                            <label>
-                                                <p>От 9 до 12 детей</p>
-                                                <p>2050 руб.</p>
-                                                <input type="radio" name="price-1">
-                                            </label>
-                                            <label>
-                                                <p>От 13 до 15 детей</p>
-                                                <p>2050 руб.</p>
-                                                <input type="radio" name="price-1">
-                                            </label>
-                                            <label>
-                                                <p>От 16 до 20 детей</p>
-                                                <p>2050 руб.</p>
-                                                <input type="radio" name="price-1">
-                                            </label>
-                                        </div>
-                                        <p>Forem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                        <a href="#" class="btn-green">Заказать для класса/группы</a>
-                                    </div>
-                                    <div class="excursion-aside__groups">
-                                        <h4>Записаться в сборную группу</h4>
-                                        <label>
-                                            <p>18 мая, 16:00, 7-10 лет</p>
-                                            <p>2050 руб.</p>
-                                            <input type="radio" name="price-1">
-                                        </label>
-                                        <label>
-                                            <p>18 мая, 16:00, 7-10 лет</p>
-                                            <p>2050 руб.</p>
-                                            <input type="radio" name="price-1">
-                                        </label>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                    </div>
-                                </main>
-                            </div>
-                        </aside>
-                    </div>
-                </article>
-                <article class="excursion-main">
-                    <div class="container">
-                        <div class="excursion-main__info">
                             <div class="excursion-main__reviews">
                                 <div class="excursion-main__header">
                                     <h2>Комментарии</h2>
@@ -392,6 +369,60 @@
                                 </div>
                             </form>
                         </div>
+                        <aside class="excursion-main__aside excursion-aside">
+                            <div class="excursion-aside__prices">
+                                <header class="excursion-aside__header">
+                                    <h3>Стоимость</h3>
+                                    <p>Sorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                                </header>
+                                <main class="excursion-aside__main">
+                                    <div class="excursion-aside__childrens">
+                                        <div class="excursion-aside__count">
+                                            <div class="excursion-aside__count-header">
+                                                <p>Размер группы</p>
+                                                <p>За человека</p>
+                                            </div>
+                                            <label>
+                                                <p>От 6 до 8 детей</p>
+                                                <p>2050 руб.</p>
+                                                <input type="radio" name="price-1">
+                                            </label>
+                                            <label>
+                                                <p>От 9 до 12 детей</p>
+                                                <p>2050 руб.</p>
+                                                <input type="radio" name="price-1">
+                                            </label>
+                                            <label>
+                                                <p>От 13 до 15 детей</p>
+                                                <p>2050 руб.</p>
+                                                <input type="radio" name="price-1">
+                                            </label>
+                                            <label>
+                                                <p>От 16 до 20 детей</p>
+                                                <p>2050 руб.</p>
+                                                <input type="radio" name="price-1">
+                                            </label>
+                                        </div>
+                                        <p>Forem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        <a href="#" class="btn-green">Заказать для класса/группы</a>
+                                    </div>
+                                    <div class="excursion-aside__groups">
+                                        <h4>Записаться в сборную группу</h4>
+                                        <label>
+                                            <p>18 мая, 16:00, 7-10 лет</p>
+                                            <p>2050 руб.</p>
+                                            <input type="radio" name="price-1">
+                                        </label>
+                                        <label>
+                                            <p>18 мая, 16:00, 7-10 лет</p>
+                                            <p>2050 руб.</p>
+                                            <input type="radio" name="price-1">
+                                        </label>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    </div>
+                                </main>
+                            </div>
+                        </aside>
                     </div>
                 </article>
                 <article class="excursion-related article">
