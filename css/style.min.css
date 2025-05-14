@@ -2005,18 +2005,6 @@ body {
   .advantages__advantage img {
     width: 100%;
   }
-  .header {
-    padding: 8px 0px 18px;
-  }
-  .header .container {
-    flex-wrap: wrap;
-    gap: 12px 20px;
-  }
-  .header__nav {
-    flex: 0 0 100%;
-    order: 3;
-    justify-content: space-between;
-  }
 }
 @media only screen and (max-width: 1440px) {
   .excursion-main .container {
@@ -2053,8 +2041,6 @@ body {
     left: 50%;
     transform: translate(-50%, 0%);
   }
-}
-@media only screen and (max-width: 1280px) {
   .header .container {
     flex-wrap: nowrap;
   }
@@ -2101,6 +2087,8 @@ body {
   .header-dropdown a:not(:last-child) {
     margin-bottom: 8px;
   }
+}
+@media only screen and (max-width: 1280px) {
   .intro .image-bg.left {
     left: 88px;
     width: 216px;
@@ -2899,6 +2887,9 @@ body {
   .header .container {
     gap: 10px;
   }
+  .breadcrumbs {
+    margin-bottom: 0px;
+  }
   .intro .block-header h1 span {
     display: none;
   }
@@ -2941,6 +2932,16 @@ body {
     order: 3;
     margin-bottom: 0px;
   }
+  .excursion-header__count p:first-child {
+    font-size: 20px;
+  }
+  .excursion-header__count p:first-child img {
+    width: 20px;
+    height: 20px;
+  }
+  .excursion-header__count p:last-child {
+    font-size: 14px;
+  }
   .excursion-aside__groups label p {
     font-size: 16px;
   }
@@ -2949,9 +2950,14 @@ body {
   }
 }
 @media only screen and (max-width: 378px) {
-  .excursion-aside__groups label {
-    flex-wrap: wrap;
-    text-align: center;
-    justify-content: center;
+  .excursion-aside__count label p,
+  .excursion-aside__count-header p {
+    font-size: 16px;
+  }
+  .excursion-aside__groups label span {
+    display: block;
+  }
+  .excursion-aside__childrens > .btn-green {
+    font-size: 16px;
   }
 }
