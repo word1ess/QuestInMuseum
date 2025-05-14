@@ -1485,7 +1485,6 @@ ul li {
   background: rgba(255, 255, 255, 0.8);
 }
 .header.active:has(.header__burger.burger-active) {
-  backdrop-filter: blur(0px);
   background: rgb(255, 255, 255);
 }
 .header .container {
@@ -1569,6 +1568,9 @@ ul li {
   color: #5a5758;
 }
 .header__nav a > svg {
+  display: none;
+}
+.header__nav a > span {
   display: none;
 }
 .header-dropdown {
@@ -2004,6 +2006,62 @@ body {
   .advantages__advantage img {
     width: 100%;
   }
+  .header .container {
+    flex-wrap: nowrap;
+  }
+  .header__nav {
+    flex: 1 1 auto;
+    order: unset;
+    justify-content: flex-start;
+    position: relative;
+  }
+  .header__nav a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 16px;
+  }
+  .header__nav a > span {
+    display: block;
+  }
+  .header__nav a.hidden {
+    display: none;
+  }
+  .header__nav a svg {
+    display: block;
+    padding: 8px;
+  }
+  .header__nav a:has(svg):hover + .header-dropdown {
+    display: block;
+  }
+  .header-dropdown {
+    display: none;
+    position: absolute;
+    top: 20px;
+    padding-top: 20px;
+    left: -16px;
+  }
+  .header-dropdown__row {
+    background: #f7f5f6;
+    box-shadow: 0 12px 24px 0 rgba(21, 19, 20, 0.16);
+    border-radius: 16px;
+    padding: 16px;
+  }
+  .header-dropdown:hover {
+    display: block;
+  }
+  .header-dropdown a {
+    display: block;
+  }
+  .header-dropdown a:not(:last-child) {
+    margin-bottom: 8px;
+  }
+  .header__btns p {
+    font-size: 16px;
+  }
+  .excursion-main + .excursion-main .excursion-main__info {
+    max-width: 100%;
+  }
 }
 @media only screen and (max-width: 1440px) {
   .excursion-main .container {
@@ -2039,52 +2097,6 @@ body {
     bottom: 0px;
     left: 50%;
     transform: translate(-50%, 0%);
-  }
-  .header .container {
-    flex-wrap: nowrap;
-  }
-  .header__nav {
-    flex: 1 1 auto;
-    order: unset;
-    justify-content: flex-start;
-    position: relative;
-  }
-  .header__nav a {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-  .header__nav a.hidden {
-    display: none;
-  }
-  .header__nav a svg {
-    display: block;
-    padding: 8px;
-  }
-  .header__nav a:has(svg):hover + .header-dropdown {
-    display: block;
-  }
-  .header-dropdown {
-    display: none;
-    position: absolute;
-    top: 20px;
-    padding-top: 20px;
-    left: -16px;
-  }
-  .header-dropdown__row {
-    background: #f7f5f6;
-    box-shadow: 0 12px 24px 0 rgba(21, 19, 20, 0.16);
-    border-radius: 16px;
-    padding: 16px;
-  }
-  .header-dropdown:hover {
-    display: block;
-  }
-  .header-dropdown a {
-    display: block;
-  }
-  .header-dropdown a:not(:last-child) {
-    margin-bottom: 8px;
   }
 }
 @media only screen and (max-width: 1280px) {
@@ -2958,5 +2970,22 @@ body {
   }
   .excursion-aside__childrens > .btn-green {
     font-size: 16px;
+  }
+  .header .container {
+    gap: 15px;
+  }
+  .header__btns {
+    gap: 15px;
+  }
+  .header__btns a img {
+    width: 20px;
+    height: 20px;
+  }
+  .header__btns a:first-child img {
+    width: 20px;
+    height: 20px;
+  }
+  .header__logo {
+    width: 150px;
   }
 }
