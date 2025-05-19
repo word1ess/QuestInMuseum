@@ -1964,6 +1964,9 @@ ul li {
   height: 100%;
   object-fit: contain;
 }
+.footer .dropdown a {
+  color: #0a0a29;
+}
 
 body {
   font-family: Mulish, sans-serif;
@@ -2065,6 +2068,23 @@ body {
   .excursion-main + .excursion-main .excursion-main__info {
     max-width: 100%;
   }
+  .intro {
+    height: calc(100vh - 80px);
+    padding-top: 0px;
+  }
+  .intro .block-header h1 {
+    font-size: 42px;
+  }
+  .intro .btn-green {
+    position: relative;
+    z-index: 2;
+  }
+  .intro .image-bg.left, .intro .image-bg.center, .intro .image-bg.right {
+    height: 30vh;
+  }
+  .intro .image-bg.center {
+    bottom: -40px;
+  }
 }
 @media only screen and (max-width: 1440px) {
   .excursion-main .container {
@@ -2105,8 +2125,6 @@ body {
 @media only screen and (max-width: 1280px) {
   .intro .image-bg.left {
     left: 88px;
-    width: 216px;
-    height: 287px;
   }
   .intro .image-bg.right {
     right: 100px;
@@ -2279,11 +2297,17 @@ body {
   .intro .block-header h1 {
     font-size: 32px;
   }
+  .intro .image-bg.left, .intro .image-bg.center, .intro .image-bg.right {
+    height: auto;
+  }
   .intro .image-bg.left {
     left: 0px;
   }
   .intro .image-bg.right {
     right: 20px;
+  }
+  .intro .image-bg.center {
+    bottom: 0px;
   }
   .sub-intro__row {
     gap: 40px;
