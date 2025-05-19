@@ -2155,15 +2155,22 @@ body {
   .tabs__scroll {
     overflow-x: auto;
     overflow-y: hidden;
-    gap: 80px;
     position: relative;
     padding-right: 20px;
+    gap: 20px;
   }
   .tabs__scroll a {
     min-width: fit-content;
   }
   .tabs__scroll .tabs__links {
     min-width: fit-content;
+  }
+  .tabs__scroll .btn-green {
+    margin-left: 0px;
+  }
+  .tabs__links a {
+    font-size: 20px;
+    padding: 16px;
   }
 }
 @media only screen and (max-width: 1280px) {
@@ -2392,10 +2399,6 @@ body {
   }
   .types-quests__quest h3 {
     font-size: 24px;
-  }
-  .tabs__links a {
-    font-size: 20px;
-    padding: 16px;
   }
   .items__row {
     grid-template-columns: repeat(2, 1fr);
