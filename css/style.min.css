@@ -614,6 +614,10 @@ ul li {
   margin: 80px auto 0px;
 }
 
+.item {
+  display: flex;
+  flex-direction: column;
+}
 .item__img {
   aspect-ratio: 4.64/3.2;
   position: relative;
@@ -650,6 +654,7 @@ ul li {
 }
 .item__header {
   margin-bottom: 16px;
+  flex: 1 1 auto;
 }
 .item__header h3 {
   font-size: 32px;
@@ -2087,6 +2092,11 @@ body {
     bottom: 60px;
   }
 }
+@media only screen and (max-width: 1500px) {
+  .intro .image-bg.center {
+    bottom: -40px;
+  }
+}
 @media only screen and (max-width: 1440px) {
   .excursion-main .container {
     display: flex;
@@ -2112,9 +2122,6 @@ body {
   .subcribe-tg .container {
     margin: 0px 80px;
   }
-  .content {
-    padding-top: 120px;
-  }
   .intro .image-bg.road {
     width: 2040px;
     height: 665px;
@@ -2122,11 +2129,41 @@ body {
     left: 50%;
     transform: translate(-50%, 0%);
   }
-  .intro .image-bg.center {
-    bottom: 0px;
-  }
   .advantages__advantage img {
     height: 120px;
+  }
+  .tabs__header {
+    flex-wrap: nowrap;
+  }
+  .tabs__header .btn-green {
+    font-size: 20px;
+    padding: 16px;
+  }
+  .tabs__header:has(.tabs__scroll) {
+    position: relative;
+  }
+  .tabs__header:has(.tabs__scroll)::before {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    width: 27px;
+    background: linear-gradient(90deg, rgba(247, 245, 246, 0) 0%, #f7f5f6 100%);
+  }
+  .tabs__scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 80px;
+    position: relative;
+    padding-right: 20px;
+  }
+  .tabs__scroll a {
+    min-width: fit-content;
+  }
+  .tabs__scroll .tabs__links {
+    min-width: fit-content;
   }
 }
 @media only screen and (max-width: 1280px) {
@@ -2355,39 +2392,6 @@ body {
   }
   .types-quests__quest h3 {
     font-size: 24px;
-  }
-  .tabs__header {
-    flex-wrap: nowrap;
-  }
-  .tabs__header .btn-green {
-    font-size: 20px;
-    padding: 16px;
-  }
-  .tabs__header:has(.tabs__scroll) {
-    position: relative;
-  }
-  .tabs__header:has(.tabs__scroll)::before {
-    content: "";
-    position: absolute;
-    z-index: 3;
-    right: 97px;
-    top: 0px;
-    bottom: 0px;
-    width: 27px;
-    background: linear-gradient(90deg, rgba(247, 245, 246, 0) 0%, #f7f5f6 100%);
-  }
-  .tabs__scroll {
-    overflow-x: auto;
-    overflow-y: hidden;
-    gap: 80px;
-    position: relative;
-    padding-right: 20px;
-  }
-  .tabs__scroll a {
-    min-width: fit-content;
-  }
-  .tabs__scroll .tabs__links {
-    min-width: fit-content;
   }
   .tabs__links a {
     font-size: 20px;
