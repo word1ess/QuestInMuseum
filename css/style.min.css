@@ -2004,10 +2004,11 @@ body {
 
 @media only screen and (max-width: 1600px) {
   .advantages__advantage h3 {
-    font-size: 22px;
+    font-size: 20px;
   }
   .advantages__advantage img {
     width: 100%;
+    height: 160px;
   }
   .header .container {
     flex-wrap: nowrap;
@@ -2083,7 +2084,7 @@ body {
     height: 30vh;
   }
   .intro .image-bg.center {
-    bottom: -40px;
+    bottom: 60px;
   }
 }
 @media only screen and (max-width: 1440px) {
@@ -2120,6 +2121,12 @@ body {
     bottom: 0px;
     left: 50%;
     transform: translate(-50%, 0%);
+  }
+  .intro .image-bg.center {
+    bottom: 40px;
+  }
+  .advantages__advantage img {
+    height: 120px;
   }
 }
 @media only screen and (max-width: 1280px) {
