@@ -2123,7 +2123,7 @@ body {
     transform: translate(-50%, 0%);
   }
   .intro .image-bg.center {
-    bottom: 40px;
+    bottom: 0px;
   }
   .advantages__advantage img {
     height: 120px;
