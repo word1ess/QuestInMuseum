@@ -237,6 +237,13 @@ ul li {
   color: #151314;
 }
 
+.btns {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
 .btn-green {
   display: flex;
   align-items: center;
@@ -1125,6 +1132,9 @@ ul li {
   position: sticky;
   top: 0px;
 }
+.excursion-aside__main .excursion-aside__header {
+  display: none;
+}
 .excursion-aside__header {
   margin-bottom: 24px;
 }
@@ -1490,6 +1500,48 @@ ul li {
 .rating-input > input {
   display: none;
 }
+.plyr {
+  z-index: 10;
+}
+
+.lg-video-cont .plyr {
+  height: 100%;
+  width: auto;
+  margin: 0 auto;
+}
+.lg-video-cont .plyr__controls,
+.lg-video-cont .plyr__control {
+  z-index: 10;
+}
+
+.plyr--playing::after {
+  display: none;
+}
+
+.plyr--paused::after {
+  content: "▸";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background: rgba(21, 19, 20, 0.7);
+  font-size: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 50%;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  z-index: 10;
+}
+
+.lg-outer {
+  overscroll-behavior: contain;
+}
+
 .header {
   position: fixed;
   width: 100%;
@@ -1718,10 +1770,6 @@ ul li {
   margin-left: auto;
   margin-right: auto;
 }
-.intro .btn-green {
-  margin: 0 auto;
-}
-
 .sub-intro__row {
   display: flex;
   gap: 90px;
@@ -2029,14 +2077,48 @@ body {
   padding: 0px 80px;
 }
 
-@media only screen and (max-width: 1600px) {
+@media only screen and (max-width: 1920px) {
+  .intro {
+    height: calc(100vh - 80px);
+    padding-top: 0px;
+  }
+  .intro .block-header h1 {
+    font-size: 42px;
+  }
+  .intro .btn-green {
+    position: relative;
+    z-index: 2;
+  }
+  .intro .image-bg.left, .intro .image-bg.center, .intro .image-bg.right {
+    height: 30vh;
+  }
+  .intro .image-bg.center {
+    height: 25vh;
+    bottom: -40px;
+  }
+  .advantages__advantage {
+    padding: 12.5px;
+  }
+  .advantages__advantage img {
+    height: 140px;
+  }
   .advantages__advantage h3 {
     font-size: 20px;
   }
-  .advantages__advantage img {
-    width: 100%;
-    height: 160px;
+  .types-quests__quest {
+    padding: 12.5px;
   }
+  .types-quests__quest img {
+    width: 140px;
+  }
+  .types-quests__quest h3 {
+    font-size: 24px;
+  }
+  .item__header h3 {
+    font-size: 28px;
+  }
+}
+@media only screen and (max-width: 1600px) {
   .header .container {
     flex-wrap: nowrap;
   }
@@ -2095,47 +2177,6 @@ body {
   }
   .excursion-main + .excursion-main .excursion-main__info {
     max-width: 100%;
-  }
-  .intro {
-    height: calc(100vh - 80px);
-    padding-top: 0px;
-  }
-  .intro .block-header h1 {
-    font-size: 42px;
-  }
-  .intro .btn-green {
-    position: relative;
-    z-index: 2;
-  }
-  .intro .image-bg.left, .intro .image-bg.center, .intro .image-bg.right {
-    height: 30vh;
-  }
-  .intro .image-bg.center {
-    bottom: 60px;
-  }
-}
-@media only screen and (max-width: 1500px) {
-  .intro .image-bg.center {
-    height: 25vh;
-    bottom: -40px;
-  }
-  .advantages__advantage {
-    padding: 12.5px;
-  }
-  .advantages__advantage img {
-    height: 100px;
-  }
-  .advantages__advantage h3 {
-    font-size: 18px;
-  }
-  .types-quests__quest {
-    padding: 12.5px;
-  }
-  .types-quests__quest img {
-    width: 140px;
-  }
-  .types-quests__quest h3 {
-    font-size: 24px;
   }
 }
 @media only screen and (max-width: 1440px) {
@@ -2213,10 +2254,10 @@ body {
 }
 @media only screen and (max-width: 1280px) {
   .intro .image-bg.left {
-    left: 88px;
+    left: 20px;
   }
   .intro .image-bg.right {
-    right: 100px;
+    right: 20px;
   }
   .sub-intro__row > img {
     max-width: 35%;
@@ -2402,6 +2443,9 @@ body {
   }
   .intro .image-bg.center {
     bottom: 0px;
+  }
+  .intro .btns {
+    display: none;
   }
   .sub-intro__row {
     gap: 40px;
@@ -2867,12 +2911,18 @@ body {
   .excursion-main__send .checkbox {
     max-width: 100%;
   }
+  .excursion-aside__header {
+    display: none;
+  }
   .excursion-aside__prices {
     padding: 24px;
   }
   .excursion-aside__main {
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     gap: 40px;
+  }
+  .excursion-aside__main .excursion-aside__header {
+    display: block;
   }
   .excursion-aside__childrens, .excursion-aside__groups {
     flex: 1 1 100%;
