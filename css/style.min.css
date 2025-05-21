@@ -1785,6 +1785,9 @@ ul li {
   width: 100%;
   max-width: 400px;
 }
+.intro .btns .btn-pink {
+  border: 2px solid #e0214d;
+}
 
 .sub-intro__row {
   display: flex;
