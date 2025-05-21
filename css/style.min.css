@@ -968,10 +968,10 @@ ul li {
   height: 100%;
   object-fit: cover;
 }
-.excursion-main__slider .swiper-slide:has(video) {
+.excursion-main__slider .swiper-slide:has(img.video-poster) a {
   position: relative;
 }
-.excursion-main__slider .swiper-slide:has(video)::after {
+.excursion-main__slider .swiper-slide:has(img.video-poster) a::after {
   content: "▸";
   position: absolute;
   top: 50%;
@@ -1012,10 +1012,10 @@ ul li {
   height: 100%;
   object-fit: cover;
 }
-.excursion-main__thumb .swiper-slide:has(video) {
+.excursion-main__thumb .swiper-slide:has(img.video-poster) {
   position: relative;
 }
-.excursion-main__thumb .swiper-slide:has(video)::after {
+.excursion-main__thumb .swiper-slide:has(img.video-poster)::after {
   content: "▸";
   position: absolute;
   top: 50%;
@@ -1513,6 +1513,12 @@ ul li {
 .lg-video-cont .plyr__control {
   z-index: 10;
 }
+.lg-video-cont .lg-video-poster {
+  display: none !important;
+}
+.lg-video-cont .plyr {
+  cursor: pointer;
+}
 
 .plyr--playing::after {
   display: none;
@@ -1749,6 +1755,7 @@ ul li {
 .intro .image-bg.center {
   left: 50%;
   bottom: 53px;
+  height: calc(100% - 541px - 53px);
   transform: translate(-50%, 0px);
 }
 .intro .image-bg.road {
@@ -1770,6 +1777,15 @@ ul li {
   margin-left: auto;
   margin-right: auto;
 }
+.intro .btns {
+  flex-direction: column;
+}
+.intro .btns .btn-green,
+.intro .btns .btn-pink {
+  width: 100%;
+  max-width: 400px;
+}
+
 .sub-intro__row {
   display: flex;
   gap: 90px;
@@ -2089,11 +2105,11 @@ body {
     position: relative;
     z-index: 2;
   }
-  .intro .image-bg.left, .intro .image-bg.center, .intro .image-bg.right {
+  .intro .image-bg.left, .intro .image-bg.right {
     height: 30vh;
   }
   .intro .image-bg.center {
-    height: 25vh;
+    height: calc(100vh - 541px + 40px);
     bottom: -40px;
   }
   .advantages__advantage {
