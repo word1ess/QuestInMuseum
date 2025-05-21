@@ -2335,12 +2335,12 @@ body {
   .reviews .reviews-item {
     flex: 0 0 242px;
   }
-  .excursion-main__thumb .swiper-slide:has(video)::after {
+  .excursion-main__thumb .swiper-slide:has(img.video-poster)::after {
     width: 40px;
     height: 40px;
     font-size: 50px;
   }
-  .excursion-main__slider .swiper-slide:has(video)::after {
+  .excursion-main__slider .swiper-slide:has(img.video-poster) a::after {
     width: 70px;
     height: 70px;
     font-size: 70px;
