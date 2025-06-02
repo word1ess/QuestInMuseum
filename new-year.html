@@ -33,6 +33,19 @@
                 <img src="img/svgicons/search.svg" alt="search">
                 Поиск
             </button>
+            <div class="header-lk">
+                <div class="header-lk__dropdown">
+                    <div class="header-lk__dropdown-container">
+                        <a href="#">
+                            <img src="img/svgicons/user.svg" alt="">
+                            User name
+                        </a>
+                        <a href="#">Мои заказы</a>
+                        <a href="#">Настройки</a>
+                        <a href="#">Выйти</a>
+                    </div>
+                </div>
+            </div>
             <a href="#" class="hidden">Квест-экскурсии</a>
             <a href="#">
                 Экскурсии
@@ -80,6 +93,20 @@
             <a href="#">
                 <img src="img/svgicons/tg.svg" alt="tg">
             </a>
+            <div class="header-lk">
+                <img src="img/svgicons/user.svg" alt="">
+                <div class="header-lk__dropdown">
+                    <div class="header-lk__dropdown-container">
+                        <a href="#">
+                            <img src="img/svgicons/user.svg" alt="">
+                            User name
+                        </a>
+                        <a href="#">Мои заказы</a>
+                        <a href="#">Настройки</a>
+                        <a href="#">Выйти</a>
+                    </div>
+                </div>
+            </div>
             <button class="btn-green">Заказать звонок</button>
             <form action="#" class="header-search__form search">
                 <div class="container">
@@ -494,7 +521,6 @@
                             .
                         </p>
                     </label>
-                    <footer class="contact-form__footer"></footer>
                 </form>
             </div>
         </div>
@@ -525,9 +551,177 @@
                             .
                         </p>
                     </label>
-                    <footer class="contact-form__footer"></footer>
                 </form>
             </div>
+        </div>
+    </div>
+</div>
+<div class="dialogbox dialogbox-signin">
+    <div class="dialogbox__inner">
+        <div class="dialogbox__window">
+            <div class="dialogbox__close"></div>
+            <div class="contact__form">
+                <form action="#">
+                    <header class="block-header">
+                        <h2>Войти в аккаунт</h2>
+                    </header>
+                    <div class="dialogbox__inputs">
+                        <input type="text" name="login" placeholder="Логин">
+                        <input type="password" name="password" placeholder="Пароль">
+                    </div>
+                    <button class="btn-green">Войти</button>
+                    <div class="dialogbox__remember">
+                        <label class="checkbox">
+                            <input type="checkbox" class="custom-checkbox" checked="">
+                            <p>
+                                Запомнить меня
+                            </p>
+                        </label>
+                        <a href="#">Забыли пароль?</a>
+                    </div>
+                    <footer class="dialogbox__footer">
+                        Еще нет аккаунта?
+                        <a href="#">Зарегистрироваться</a>
+                    </footer>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dialogbox dialogbox-signup">
+    <div class="dialogbox__inner">
+        <div class="dialogbox__window">
+            <div class="dialogbox__close"></div>
+            <div class="contact__form">
+                <form action="#">
+                    <header class="block-header">
+                        <h2>Зарегистрироваться</h2>
+                    </header>
+                    <div class="dialogbox__inputs">
+                        <input type="text" name="login" placeholder="Логин">
+                        <input type="password" name="password" placeholder="Пароль">
+                        <input type="password" name="password" placeholder="Повторите пароль">
+                    </div>
+                    <button class="btn-green">Зарегистрироваться</button>
+                    <label class="checkbox">
+                        <input type="checkbox" class="custom-checkbox" checked="">
+                        <p>
+                            Я соглашаюсь с
+                            <a href="#">Политикой конфиденциальности</a>
+                            и
+                            <a href="#">Обработки персональных данных</a>
+                            .
+                        </p>
+                    </label>
+                    <footer class="dialogbox__footer">
+                        Уже есть аккаунт?
+                        <a href="#">Войти</a>
+                    </footer>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dialogbox dialogbox-recover">
+    <div class="dialogbox__inner">
+        <div class="dialogbox__window">
+            <div class="dialogbox__close"></div>
+            <div class="contact__form">
+                <form action="#">
+                    <header class="block-header">
+                        <h2>Восстановление пароля</h2>
+                    </header>
+                    <div class="dialogbox__inputs">
+                        <input type="text" name="login" placeholder="Логин">
+                    </div>
+                    <button class="btn-green">Отправить</button>
+                    <footer class="dialogbox__footer">
+                        Уже есть аккаунт?
+                        <a href="#">Войти</a>
+                    </footer>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dialogbox dialogbox-recover-success">
+    <div class="dialogbox__inner">
+        <div class="dialogbox__window">
+            <div class="dialogbox__close"></div>
+            <header class="block-header big">
+                <h2>Успешно!</h2>
+                <p>Ссылка для восстановления доступа отправлена Вам на почту</p>
+            </header>
+        </div>
+    </div>
+</div>
+<div class="dialogbox dialogbox-buy">
+    <div class="dialogbox__inner">
+        <div class="dialogbox__window">
+            <div class="dialogbox__close"></div>
+            <form action="#">
+                <header class="block-header">
+                    <h2>Быстрая покупка</h2>
+                </header>
+                <div class="dialogbox-buy__info">
+                    <div class="dialogbox-buy__name">
+                        <h3>Тайна древней карты Кремля, 5-7 лет</h3>
+                        <p>24 мая 14:00 (сб) • Александровский сад и красная площадь</p>
+                    </div>
+                    <div class="dialogbox-buy__counter">
+                        <p>
+                            <del>1250 руб.</del>
+                            1350 руб.
+                        </p>
+                        <article class="count">
+                            <button type="button">
+                                -
+                            </button>
+                            <input type="text" name="count" value="1">
+                            <button type="button">
+                                +
+                            </button>
+                        </article>
+                    </div>
+                </div>
+                <div class="dialogbox__inputs">
+                    <input type="email" name="mail" placeholder="Email">
+                    <input type="tel" name="phone" placeholder="Телефон">
+                    <input type="text" name="name" placeholder="Имя Фамилия">
+                </div>
+                <div class="dialogbox__promo">
+                    <input type="text" name="promocode" placeholder="Промокод">
+                    <button class="btn-green">Применить</button>
+                </div>
+                <div class="dialogbox__promo">
+                    <input type="text" name="promocode" placeholder="Использовать бонусные баллы">
+                    <button class="btn-green">Применить</button>
+                </div>
+                <button class="btn-green">Оплатить 2700 руб.</button>
+                <label class="checkbox">
+                    <input type="checkbox" class="custom-checkbox" checked="">
+                    <p>
+                        Я соглашаюсь с
+                        <a href="#">Условиями приобретения билетов</a>
+                        .
+                    </p>
+                </label>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="dialogbox dialogbox-buy-success">
+    <div class="dialogbox__inner">
+        <div class="dialogbox__window">
+            <div class="dialogbox__close"></div>
+            <header class="block-header big">
+                <h2>Успешно!</h2>
+                <p>
+                    Накануне Вы получите письмо
+                    на WatsApp с деталями встречи
+                </p>
+            </header>
+            <button class="btn-green">Вернуться в афишу сборных групп</button>
         </div>
     </div>
 </div>
