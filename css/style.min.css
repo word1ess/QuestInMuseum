@@ -1856,6 +1856,7 @@ ul li {
   box-shadow: 0 12px 24px 0 rgba(21, 19, 20, 0.16);
   border-radius: 24px;
   padding: 24px;
+  background: #fff;
 }
 .header-lk__dropdown a {
   justify-content: flex-start;
@@ -2106,6 +2107,7 @@ ul li {
   gap: 16px;
   max-width: 712px;
   margin: 0 auto;
+  grid-auto-rows: 1fr;
 }
 .history-page__item {
   display: flex;
