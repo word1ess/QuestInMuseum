@@ -2101,12 +2101,13 @@ ul li {
   opacity: 0.7;
 }
 
+.history-page .container {
+  max-width: 872px;
+}
 .history-page__row {
   display: grid;
   grid-template-columns: auto;
   gap: 16px;
-  max-width: 712px;
-  margin: 0 auto;
   grid-auto-rows: 1fr;
 }
 .history-page__item {
@@ -2544,6 +2545,22 @@ body {
     font-size: 24px;
   }
   .item__header h3 {
+    font-size: 28px;
+  }
+  .history-page__name h2 {
+    font-size: 28px;
+  }
+  .history-page__name p {
+    font-size: 16px;
+  }
+  .history-page__header time,
+  .history-page__header p {
+    font-size: 28px;
+  }
+  .history-page__info > p {
+    font-size: 28px;
+  }
+  .history-page__item.disabled::after {
     font-size: 28px;
   }
 }
@@ -3665,7 +3682,7 @@ body {
   }
   .history-page__header time,
   .history-page__header p {
-    font-size: 16px;
+    font-size: 12px;
   }
   .history-page__name h2 {
     font-size: 20px;
@@ -3674,7 +3691,7 @@ body {
     font-size: 14px;
   }
 }
-@media only screen and (max-width: 378px) {
+@media only screen and (max-width: 390px) {
   .excursion-aside__count label p,
   .excursion-aside__count-header p {
     font-size: 16px;
